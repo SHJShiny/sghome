@@ -1,96 +1,38 @@
----
-layout: default
-pagination: 
-  enabled: true
----
+<!DOCTYPE html>
+<head>
+<title>新加坡房屋政策</title>
+<div align="center">
+	<h1>著有“居者有其屋”之称的新加坡是如何让各个群体拥有房子？<h1>
+		<body bgcolor="white">
+
+<div class="image-block" style=width:80%>
+
+</head>
+
+<body>
+<H6 align="center">新加坡是个多元种族的国家，其中华人占七成以上。基于移民社会的特性、殖民统治的历史和地理位置的影响，使得新加坡社会文化更加多元化。截止2021年6月，新加坡总人口545.35万，公民349.82万，永久居民48.9万，非居民146.67万。在大流行疾病的影响下让更多人检视了自己对生活需求，相较于2020年的人口比例，新加坡总人口减少了4.1%，这当中主要是非居民流失。</H6> 
+	<div class="flourish-embed flourish-chart" data-src="visualisation/10201523"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+<H6 align="center">透过30年人口统计图，新加坡1991年总人口313.51万上升至2021年总人口545.35万,增加了1.31%。</H6> 
+	<div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/9833737"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+<H6 align="center">新加坡约有31％的居民居住在四房式组屋，23％的居民居住在五房式组屋和行政组屋。新加坡政府鼓励公民生育和提倡多代同堂，这无形中促使了更大房型的需求。</H6> 
+	<div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/10201166"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+<H6 align="center">截止2021年，淡宾尼(Tampines)是本地最多住宅单位的城镇，该区总住宅单位达7万5342个单位。其次是裕廊西 (Jurong West) , 该区总住宅单位达7万5206个单位，和淡宾尼仅差136个单位。</H6>
+
+<style type="text/css">
+<div{margin:5px;border:0;padding:0;}
+<H6 align="center">新加坡住宅单位的城镇统计图</H6>
+</div>
+</style>
+
+<video controls="controls" loop="loop" autoplay="autoplay" width="1000" height="700">
+	<source src="town.mp4" type="video/mp4"/>
+</video>
 
 
-  <figure class="ampstart-image-fullpage-hero m0 relative mb4">
-    <amp-img width="404" height="720" alt="Cover" layout="responsive" src="{{ site.baseurl }}{{ site.cover }}" media="(max-width: 415px)"></amp-img>
-    <amp-img height="720" alt="Cover" layout="fixed-height" src="{{ site.baseurl }}{{ site.cover }}" media="(min-width: 416px)"></amp-img>
-    <figcaption class="absolute top-0 right-0 bottom-0 left-0">
-      <header class="p3">
-        <h1 class="ampstart-fullpage-hero-heading mb0 hanuman">
-          <span class="ampstart-fullpage-hero-heading-text title">
-            {{ site.title }}
-          </span>
-        </h1>
-        <h2 class="ampstart-fullpage-hero-heading mb0">
-          <span class="ampstart-fullpage-hero-heading-text description">
-            {{ site.description }}
-          </span>
-        </h2>
-    </header>
-    {% if site.cover %}
-    <footer class="absolute left-0 right-0 bottom-0">
-      <a class="ampstart-readmore py3 caps line-height-2 text-decoration-none center block h5" href="#content"><span class="ampstart-readmore-text px1">Read more</span></a>
-    </footer>
-    {% else %}
-    <footer class="absolute left-0 right-0 bottom-0">
-      <a class="ampstart-read py3 caps line-height-2 text-decoration-none center block h5" href="#content"><span class="ampstart-readmore-text px1">Read more</span></a>
-    </footer>
-    {% endif %}
-    </figcaption>
-  </figure>
+<H6 align="center">新加坡是世界上拥屋率最高的国家之一，超过90%的人都有自己的房子，相当于5个人中的4个人都能拥有自己的温馨小屋。在这个人口不断上升的小岛，新加坡针对不同群体的补助金和购房计划让公民和永久居民都能更容易购房，公民有两次的机会享有政府的福利与补贴申请预购组屋或剩余组屋；永久居民需和公民结婚才能一同申请预购组屋或剩余组屋。欲买房者应先了解自身的条件是否具备购买预购组屋或剩余组屋的资格、住房贷款选项、组屋预算。</H6> 
+<H6 align="center">以下是政府为不同人群设计的购房计划：</H6>
 
-<main id="content" role="main" class="content">
 
-  <div class="cf frame">
-    {% for post in paginator.posts %}
-      <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-        <div class="article-item">
-          <header class="post-header">
-            <h2 class="post-title" itemprop="name"><a href="{{ site.baseurl }}{{ post.url | remove: '/'}}" itemprop="url">{{ post.title }}</a></h2>
-          </header>
-          <section class="post-excerpt" itemprop="description">
-            <p class="post-description">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
-          </section>
-          <div class="post-meta">
-            {% for author in site.data.authors %}
-              {% if author[1].username == post.author %}
-                {% if author[1].assets %}<amp-img width="24" height="24" class="author-thumb" layout="responsive" src="{{ site.baseurl }}{{author[1].assets}}" alt="{{author[1].name}}"/></amp-img>{% endif %}
-                <a href="{{site.baseurl}}authors/#{{author[1].username}}">{{author[1].name}}</a>
-              {% endif %}
-            {% endfor %}
 
-            {% if post.tags.size > 0 %}
-                in
-                {% for tag in post.tags %}
-                    {% if forloop.index == post.tags.size %}
-                       <a href='{{site.baseurl}}tags/#{{tag}}'>{{ tag | capitalize }}</a>
-                    {% else %}
-                       <a href='{{site.baseurl}}tags/#{{tag}}'>{{ tag | capitalize }}</a>,
-                    {% endif %}
-                {% endfor %}
-            {% endif %}
-              <time class="post-date" datetime="{{ post.date | date:'%Y-%m-%d' }}">{{ post.date | date_to_string }}</time>
-          </div>
-        </div>
-      </article>
-    {% endfor %}
-  </div>
-
-  <nav class="pagination" role="navigation">
-    {% if paginator.next_page %}
-      <a class="newer-posts" href="{{ site.baseurl }}/page{{paginator.next_page}}">&larr; Older posts</a>
-    {% else %}
-      <a class="newer-posts disabled">&larr; Older posts</a>
-    {% endif %}
-    <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    {% if paginator.previous_page %}
-      {% if paginator.page == 2 %}
-        <a class="older-posts" href="{{ site.baseurl }}/">Newer posts &rarr;</a>
-      {% else %}
-        <a class="older-posts" href="{{ site.baseurl }}/page{{paginator.previous_page}}">Newer posts &rarr;</a>
-      {% endif %}
-    {% else %}
-      <a class="older-posts disabled">Newer posts &rarr;</a>
-    {% endif %}
-  </nav>
-
-</main>
-
-{% include footer.html %}
-© 2022 GitHub, Inc.
-Terms
-Privacy
+</body>
+</html>
