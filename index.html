@@ -111,8 +111,59 @@
         <div class="row justify-content-center">
             <div class="title col-md-12 col-lg-10">
                 
-                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-5">新加坡位于马来半岛南端、马六甲海峡出入口，北隔柔佛海峡与马来西亚相邻，南隔新加坡海峡与印度尼西亚相望。由新加坡岛及附近63个小岛组成。新加坡岛东西约50公里，南北约26公里，地势低平，平均海拔15米，最高峰163.63米，海岸线长200余公里。20世纪60年代，新加坡陆地面积581.5平方公里，经过多年填海造地，目前陆地面积已增加25%至728 平方公里。<br>新加坡是一个城邦国家，全国划分为五个社区（行政区），24个市镇（Town) 和3个住宅区（Estate）。2020年议席总数从89个增至93个，选区从原有的29个增至31个，即14个单选区和17个集选区。</h4>
+                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-5">新加坡位于马来半岛南端、马六甲海峡出入口，北隔柔佛海峡与马来西亚相邻，南隔新加坡海峡与印度尼西亚相望。由新加坡岛及附近63个小岛组成。新加坡岛东西约50公里，南北约26公里，地势低平，平均海拔15米，最高峰163.63米，海岸线长200余公里。20世纪60年代，新加坡陆地面积581.5平方公里，经过多年填海造地，目前陆地面积已增加25%至728 平方公里。<br>新加坡是一个城邦国家，全国划分为五个社区（行政区），24个市镇（Town) 和3个住宅区（Estate）。2020年议席总数从89个增至93个，选区从原有的29个增至31个，即14个单选区和17个集选区。&nbsp;</h4>
                 
+              <section>
+    <div class="container">
+        <div class="mbr-section-head">
+            
+     
+      <div class="row justify-content-center mt-4">
+      <div class="col-12 col-md-10 video-block">
+   
+  
+             <title>OneMap2 XYZ (Original)</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        <script src="https://cdn.onemap.sg/leaflet/onemap-leaflet.js"></script>
+    
+      
+         <div id='mapdiv' style=height:700px; width:1000px;></div>
+    
+      <script>
+        var center = L.bounds([1.56073, 104.11475], [1.16, 103.502]).getCenter();
+        var map = L.map('mapdiv').setView([center.x, center.y], 12);
+
+        var basemap = L.tileLayer('https://maps-{s}.onemap.sg/v3/Original/{z}/{x}/{y}.png', {
+          detectRetina: true,
+          maxZoom: 18,
+          minZoom: 11
+        });
+
+        map.setMaxBounds([[1.56073, 104.1147], [1.16, 103.502]]);
+
+        basemap.addTo(map);
+
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+          } 
+        }
+
+        function showPosition(position) {           
+          marker = new L.Marker([position.coords.latitude, position.coords.longitude], {bounceOnAdd: false}).addTo(map);             
+          var popup = L.popup()
+          .setLatLng([position.coords.latitude, position.coords.longitude]) 
+          .setContent('You are here!')
+          .openOn(map);         
+        }
+      </script>
+        
+             </div>
+          </div>
+      </div>
+    </div>
+</section>
+              
             </div>
         </div>
     </div>
@@ -142,6 +193,8 @@
                 
                 <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-5">新加坡是多种族国家，华人占七成以上其次是马来族和印度族等。基于移民社会的特性、殖民统治的历史和地理位置的影响，新加坡社会文化更加多元化。截止2021年6月，新加坡总人口545.35万，其中新加坡公民349.82万，永久居民48.9万，非居民146.67万。受新冠疫情影响，2021年新加坡总人口较上一年减少了4.1%，主要是非居民流失。&nbsp;</h4>
                 
+              <div class="flourish-embed flourish-chart" data-src="visualisation/10201523"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+                
             </div>
         </div>
     </div>
@@ -159,7 +212,8 @@
                 <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-5">
                     新加坡在过去的30年中，人口不断增加，从1991年的313.51万，至2021年上升至545.35万。
                 </h4>
-                
+                <div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/9833737"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
             </div>
         </div>
     </div>
@@ -429,7 +483,8 @@
                 <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-7">
                     <strong>转售组屋</strong></h3>
                 <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-5">转售组屋价格指数可用于比较组屋转售单位的整体价格变动。 整体组屋转售价持续攀升，2022年第一季的组屋转售价格指数创新高，达159.5，比上一季的155.7，转售价环比上涨2.4%。不过今年首季只有6934个组屋单位转手，比前一季的7940宗减少了12.7%，这是组屋转售量首次跌破近两年来的7000宗，也是冠病疫情暴发以来的新低。</h4>
-                
+                <div class="flourish-embed flourish-chart" data-src="visualisation/10400748"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+              
             </div>
         </div>
     </div>
@@ -624,10 +679,6 @@
             </div>
         </div>
     </div>
-</section><section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;"><a href="https://mobiri.se/2792520" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><p style="margin: 0;text-align: center;" class="display-7">Built with Mobirise &#8204;</p><a style="z-index:1" href="https://mobirise.com/offline-website-builder.html">Free Offline Website Creator</a></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/playervimeo/vimeo_player.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  
-  
-  
- <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
-    <input name="animation" type="hidden">
+</section>
   </body>
 </html>
